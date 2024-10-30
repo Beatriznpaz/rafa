@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CineGilrs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CineTech Gilrs</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sessoes">Sessões</a></li>
+                    <li><a href="#generos">Gêneros</a></li>
+                    <li><a href="#ingressos">Ingressos</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="sessoes" class="highlight">
+        <div class="container">
+            <h2>Próximas Sessões</h2>
+            <div class="carrossel">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="sessoes-list">
+                    <article class="sessao">
+                        <img src="img/1.jpeg" alt="Coraline - Descrição de Coraline">
+                        <h3>Coraline</h3>
+                        <p>Horário: 14:00 | Sala 1</p>
+                    </article>
+                    <article class="sessao">
+                        <img src="img/2.jpeg" alt="Abracadabra - Descrição do Filme 2">
+                        <h3>Abracadabra</h3>
+                        <p>Horário: 16:30 | Sala 2</p>
+                    </article>
+                    <article class="sessao">
+                        <img src="img/3.jpeg" alt="Ratatouille - Descrição do Filme 3">
+                        <h3>Ratatouille</h3>
+                        <p>Horário: 19:00 | Sala 3</p>
+                    </article>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/carousel.js"></script>
+    <section id="generos">
+        <div class="container">
+            <h2>Gêneros</h2>
+            <ul class="generos-list">
+                <li>Ação</li>
+                <li>Comédia</li>
+                <li>Drama</li>
+                <li>Ficção Científica</li>
+                <li>Suspense</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ingressos">
+        <div class="container">
+            <h2>Ingressos</h2>
+            <p>Compre seus ingressos diretamente pelo nosso site. Preços:</p>
+            <ul>
+                <li>Inteira: R$ 30,00</li>
+                <li>Meia: R$ 15,00</li>
+                <li>Idoso: R$ 10,00</li>
+            </ul>
+            <button onclick="abrirPagamento()">Comprar Ingresso</button>
+
+            <script>
+                function abrirPagamento() {
+                    window.open('pagamento.html', '_blank');
+                }
+            </script>
+
+            <div class="pagamento">
+                <h3>Dados Cadastrais</h3>
+                <form action="#" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="cartao">Número do Cartão:</label>
+                    <input type="text" id="cartao" name="cartao" required>
+                    <button type="submit">Confirmar Pagamento</button>
+                </form>
+            </div>
+
+            <div class="escolher-assento">
+                <h3>Escolha seu Assento</h3>
+                <label for="data-assento">Data:</label>
+                <input type="date" id="data-assento" name="data-assento" required>
+                <label for="assento">Número do Assento:</label>
+                <input type="number" id="assento" name="assento" min="1" required>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <div class="container">
+            <h2>Feedback</h2>
+            <div class="feedback">
+                <h3>Avalie sua Experiência</h3>
+                <div class="estrelas">
+                    <label>
+                        <input type="radio" name="estrela" value="1"> 1 estrela
+                    </label>
+                    <label>
+                        <input type="radio" name="estrela" value="2"> 2 estrelas
+                    </label>
+                    <label>
+                        <input type="radio" name="estrela" value="3"> 3 estrelas
+                    </label>
+                    <label>
+                        <input type="radio" name="estrela" value="4"> 4 estrelas
+                    </label>
+                    <label>
+                        <input type="radio" name="estrela" value="5"> 5 estrelas
+                    </label>
+                </div>
+                <textarea name="comentarios" id="comentarios" rows="4" placeholder="Deixe seu comentário sobre a compra"></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CineTech Gilrs Central - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showTooltip() {
+            document.getElementById('tooltip').style.display = 'inline';
+        }
+        function hideTooltip() {
+            document.getElementById('tooltip').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
